@@ -1,0 +1,8 @@
+# Versions below are the ones the results in this repository were produced with
+# (Python 3.9, Windows 11). Newer minor versions should also work.
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.13.1
+matplotlib==3.9.4
+scikit-learn==1.6.1
+pytest>=7.0
