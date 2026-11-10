@@ -45,9 +45,9 @@ The project was developed and tested using Python 3.9. An active internet connec
 Follow these steps to run the complete pipeline:
 
 ```bash
-git clone [<your-repo-url>](https://github.com/SaniyaArshadAli/Systems_Biology-Network_Modeling)
+git clone https://github.com/SaniyaArshadAli/Systems_Biology-Network_Modeling
 
-cd <repo-folder>
+cd <repo-folder> (E.g. cd C:\Users\HP OMNIBOOK\Downloads\SBNM_Project\SBNM_Project\SBNM_Project)
 
 pip install -r requirements.txt
 
