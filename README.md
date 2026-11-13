@@ -41,8 +41,8 @@ No raw data is stored in the repository; the script downloads ~32 MB from GEO.
 Tested with Python 3.9. Needs an internet connection for step 2.
 
 ```bash
-git clone <your-repo-url>
-cd <repo-folder>
+git clone [<your-repo-url>](https://github.com/SaniyaArshadAli/Systems_Biology-Network_Modeling)
+cd Systems_Biology-Network_Modeling
 pip install -r requirements.txt
 python 01_download_data.py                # download + preprocess (about 1 minute)
 python 02_run_lioness.py                  # LIONESS networks, ~20 s, writes 144 MB to results/
