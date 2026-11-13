@@ -1,0 +1,7 @@
+# Large / re-creatable files are not committed
+data/raw/
+data/*.csv.gz
+results/*.npy
+__pycache__/
+.pytest_cache/
+*.pyc

@@ -1,0 +1,12 @@
+# Versions below are the ones the results in this repository were produced with
+# (Python 3.9, Windows 11). Newer minor versions should also work.
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.13.1
+matplotlib==3.9.4
+scikit-learn==1.6.1
+netZooPy==0.10.8        # LIONESS / PANDA implementation (compulsory)
+# netZooPy 0.11.0 (current GitHub master, https://github.com/netZoo/netZooPy)
+# gives bit-identical LIONESS networks for this project, but it imports
+# PyTorch at start-up, so it also needs `pip install torch`.
+pytest>=7.0

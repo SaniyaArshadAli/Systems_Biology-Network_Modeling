@@ -1,0 +1,46 @@
+=== 1. Sweep: number of genes (full cohort, 36 patients) ===
+ n_genes  n_edges  n_significant  pct_significant  null_mean  null_p95  emp_fdr_mean
+     250    31125           2015            6.474      62.86    227.00         0.031
+     500   124750          11326            9.079     402.26   1471.60         0.036
+    1000   499500          39074            7.823    1347.13   4996.00         0.034
+    1500  1124250          78169            6.953    2642.21  10030.05         0.034
+
+=== 2/3. Cohort-size sweep and method comparison (500 genes; reference = all 36 patients) ===
+Full cohort: LIONESS-paired-t significant edges = 11326
+  top 0.1% edges: Jaccard(LIONESS, classic) = 0.004
+  top 1% edges: Jaccard(LIONESS, classic) = 0.102
+  top 5% edges: Jaccard(LIONESS, classic) = 0.239
+  Spearman correlation of |statistics| between methods: 0.686
+
+Stability: Jaccard overlap with full-cohort top edges (mean/std over 10 random patient subsets)
+                                               mean    std
+method                      k_pct m_patients              
+Classic diff. co-expression 0.1   9           0.068  0.038
+                                  18          0.220  0.070
+                                  27          0.365  0.110
+                            1.0   9           0.126  0.034
+                                  18          0.270  0.050
+                                  27          0.436  0.062
+                            5.0   9           0.198  0.041
+                                  18          0.367  0.047
+                                  27          0.536  0.069
+LIONESS (paired t)          0.1   9           0.019  0.014
+                                  18          0.096  0.048
+                                  27          0.223  0.051
+                            1.0   9           0.069  0.040
+                                  18          0.172  0.066
+                                  27          0.348  0.075
+                            5.0   9           0.159  0.071
+                                  18          0.304  0.080
+                                  27          0.485  0.079
+
+LIONESS: edges significant at FDR 5% (of 124750) when using only m patients:
+              mean     std
+m_patients                
+9              1.0     2.0
+18           321.0   730.0
+27          3894.0  2503.0
+
+Classic differential co-expression, 1000 genes, all 36 patients:
+  significant edges (BH FDR 5%, normal approximation): 133745
+  label-swap null: mean 8796 edges pass the same cut-off (empirical FDR 0.066)

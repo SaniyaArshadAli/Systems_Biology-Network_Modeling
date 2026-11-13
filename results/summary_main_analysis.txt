@@ -1,0 +1,32 @@
+=== A. Differential edges (paired, tumour vs matched normal) ===
+Edges tested: 499500
+Significant at FDR 5%: 39074 (7.8%)  [stronger in tumour: 15377, weaker in tumour: 23697]
+Label-swap null: 1141.8 edges pass the same |t|>=3.09 cut-off on average (range 53-10809)
+  median 464, 95th percentile 4428 (very spread out: neighbouring edges share genes, so they are not independent)
+Empirical FDR (mean null count / observed) = 0.0292; using the 95th percentile instead: 0.1133
+
+=== B. Is the rewiring just differential expression? ===
+Genes differentially expressed (paired t, FDR 5%): 811 of 1000
+Significant edges where BOTH genes are DE: 64.2%  (all edges: 65.8%)
+Spearman correlation between mean edge change and the product of the two genes' DE t-statistics: rho = -0.107
+
+=== C. Hub genes of the differential network ===
+  gene  n_significant_edges  expression_t  DE_fdr5
+  MUC1                  349      2.290396     True
+IGFBP3                  325      9.483765     True
+    CP                  323      5.701391     True
+   CLC                  304      0.889238    False
+ LYVE1                  303     -2.404798     True
+ MMP12                  295      6.667292     True
+  CCL8                  282      0.945126    False
+EPSTI1                  277      5.980476     True
+  LMO3                  276     -3.051497     True
+   INS                  270      1.054768    False
+Top-100 hubs that are also DE: 83%
+
+=== D. Do sample networks separate tumour from normal? ===
+Mean |edge weight| per sample: normal median 0.83 (max 1.22), tumour median 0.61 (max 0.95)
+Cross-validated accuracy (6-fold, grouped by patient):
+  gene expression (1000 genes):     0.889
+  LIONESS edge weights (499500):    0.764
+  control, shuffled labels (edges): 0.403
